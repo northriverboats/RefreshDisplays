@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'refresh_display_dlgyUesMN.ui'
+## Form generated from reading UI file 'refresh_displays_dlgAbmGEw.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.2
 ##
@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QDialog, QGroupBox, QLabel,
     QPushButton, QSizePolicy, QWidget)
-import refesh_displays_resources_rc
+import refresh_displays_resources_rc
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -69,36 +69,36 @@ class Ui_Dialog(object):
         self.groupBox_display_3 = QGroupBox(self.groupBox)
         self.groupBox_display_3.setObjectName(u"groupBox_display_3")
         self.groupBox_display_3.setGeometry(QRect(10, 270, 251, 61))
-        self.label_led_4 = QLabel(self.groupBox_display_3)
+        self.label_led_3 = QLabel(self.groupBox_display_3)
+        self.label_led_3.setObjectName(u"label_led_3")
+        self.label_led_3.setGeometry(QRect(10, 30, 21, 21))
+        self.label_led_3.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
+        self.label_led_3.setScaledContents(True)
+        self.label_description_3 = QLabel(self.groupBox_display_3)
+        self.label_description_3.setObjectName(u"label_description_3")
+        self.label_description_3.setGeometry(QRect(40, 30, 91, 16))
+        self.groupBox_display_4 = QGroupBox(self.groupBox)
+        self.groupBox_display_4.setObjectName(u"groupBox_display_4")
+        self.groupBox_display_4.setGeometry(QRect(10, 350, 241, 61))
+        self.label_led_4 = QLabel(self.groupBox_display_4)
         self.label_led_4.setObjectName(u"label_led_4")
         self.label_led_4.setGeometry(QRect(10, 30, 21, 21))
         self.label_led_4.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
         self.label_led_4.setScaledContents(True)
-        self.label_description_4 = QLabel(self.groupBox_display_3)
+        self.label_description_4 = QLabel(self.groupBox_display_4)
         self.label_description_4.setObjectName(u"label_description_4")
-        self.label_description_4.setGeometry(QRect(40, 30, 91, 16))
-        self.groupBox_display_4 = QGroupBox(self.groupBox)
-        self.groupBox_display_4.setObjectName(u"groupBox_display_4")
-        self.groupBox_display_4.setGeometry(QRect(10, 350, 241, 61))
-        self.label_led_5 = QLabel(self.groupBox_display_4)
+        self.label_description_4.setGeometry(QRect(40, 30, 151, 16))
+        self.groupBox_display_5 = QGroupBox(self.groupBox)
+        self.groupBox_display_5.setObjectName(u"groupBox_display_5")
+        self.groupBox_display_5.setGeometry(QRect(10, 430, 241, 61))
+        self.label_led_5 = QLabel(self.groupBox_display_5)
         self.label_led_5.setObjectName(u"label_led_5")
         self.label_led_5.setGeometry(QRect(10, 30, 21, 21))
         self.label_led_5.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
         self.label_led_5.setScaledContents(True)
-        self.label_description_5 = QLabel(self.groupBox_display_4)
+        self.label_description_5 = QLabel(self.groupBox_display_5)
         self.label_description_5.setObjectName(u"label_description_5")
         self.label_description_5.setGeometry(QRect(40, 30, 151, 16))
-        self.groupBox_display_5 = QGroupBox(self.groupBox)
-        self.groupBox_display_5.setObjectName(u"groupBox_display_5")
-        self.groupBox_display_5.setGeometry(QRect(10, 430, 241, 61))
-        self.label_led_6 = QLabel(self.groupBox_display_5)
-        self.label_led_6.setObjectName(u"label_led_6")
-        self.label_led_6.setGeometry(QRect(10, 30, 21, 21))
-        self.label_led_6.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
-        self.label_led_6.setScaledContents(True)
-        self.label_description_6 = QLabel(self.groupBox_display_5)
-        self.label_description_6.setObjectName(u"label_description_6")
-        self.label_description_6.setGeometry(QRect(40, 30, 151, 16))
 
         self.retranslateUi(Dialog)
 
@@ -119,13 +119,13 @@ class Ui_Dialog(object):
         self.label_led_2.setText("")
         self.label_description_2.setText(QCoreApplication.translate("Dialog", u"Paint Shop", None))
         self.groupBox_display_3.setTitle(QCoreApplication.translate("Dialog", u"Display 03", None))
-        self.label_led_4.setText("")
-        self.label_description_4.setText(QCoreApplication.translate("Dialog", u"Canvas Shop", None))
+        self.label_led_3.setText("")
+        self.label_description_3.setText(QCoreApplication.translate("Dialog", u"Canvas Shop", None))
         self.groupBox_display_4.setTitle(QCoreApplication.translate("Dialog", u"Display 04", None))
-        self.label_led_5.setText("")
-        self.label_description_5.setText(QCoreApplication.translate("Dialog", u"Samll Fabircation Shop", None))
+        self.label_led_4.setText("")
+        self.label_description_4.setText(QCoreApplication.translate("Dialog", u"Samll Fabircation Shop", None))
         self.groupBox_display_5.setTitle(QCoreApplication.translate("Dialog", u"Display 05", None))
-        self.label_led_6.setText("")
-        self.label_description_6.setText(QCoreApplication.translate("Dialog", u"Large Fabrication Shop", None))
+        self.label_led_5.setText("")
+        self.label_description_5.setText(QCoreApplication.translate("Dialog", u"Large Fabrication Shop", None))
     # retranslateUi
 

@@ -190,7 +190,7 @@
     <property name="title">
      <string>Display 03</string>
     </property>
-    <widget class="QLabel" name="label_led_4">
+    <widget class="QLabel" name="label_led_3">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -209,7 +209,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_description_4">
+    <widget class="QLabel" name="label_description_3">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -235,7 +235,7 @@
     <property name="title">
      <string>Display 04</string>
     </property>
-    <widget class="QLabel" name="label_led_5">
+    <widget class="QLabel" name="label_led_4">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -254,7 +254,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_description_5">
+    <widget class="QLabel" name="label_description_4">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -280,7 +280,7 @@
     <property name="title">
      <string>Display 05</string>
     </property>
-    <widget class="QLabel" name="label_led_6">
+    <widget class="QLabel" name="label_led_5">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -299,7 +299,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_description_6">
+    <widget class="QLabel" name="label_description_5">
      <property name="geometry">
       <rect>
        <x>40</x>
