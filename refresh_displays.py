@@ -13,12 +13,18 @@ class Dialog(QDialog):
 
 
     def refresh_displays(self, e):
-        self.ui.label_led_0.setPixmap(QPixmap(u":/icons/icons/red-led-on.png"))
-        self.ui.label_led_1.setPixmap(QPixmap(u":/icons/icons/green-led-on.png"))
-        self.ui.label_led_2.setPixmap(QPixmap(u":/icons/icons/blue-led-on.png"))
+        self.clear_leds()
 
     def closeEvent(self, e):
         e.accept()
+
+    def clear_leds(self):
+        self.ui.label_led_0.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
+        self.ui.label_led_1.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
+        self.ui.label_led_2.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
+        self.ui.label_led_3.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
+        self.ui.label_led_4.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
+        self.ui.label_led_5.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
 
 
 if __name__ == "__main__":
