@@ -2,6 +2,7 @@ import sys
 from PySide6.QtWidgets import QApplication, QDialog
 from PySide6.QtGui import QPixmap
 from refresh_displays_dlg import Ui_Dialog
+from vncdotool import api
 
 class Dialog(QDialog):
     def __init__(self, parent=None):
@@ -14,6 +15,12 @@ class Dialog(QDialog):
 
     def refresh_displays(self, e):
         self.clear_leds()
+        self.refresh_display("display00",self.ui.label_led_0)
+        self.refresh_display("display01",self.ui.label_led_1)
+        self.refresh_display("display02",self.ui.label_led_2)
+        self.refresh_display("display03",self.ui.label_led_3)
+        self.refresh_display("display04",self.ui.label_led_4)
+        self.refresh_display("display05",self.ui.label_led_5)
 
     def closeEvent(self, e):
         e.accept()
@@ -25,6 +32,17 @@ class Dialog(QDialog):
         self.ui.label_led_3.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
         self.ui.label_led_4.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
         self.ui.label_led_5.setPixmap(QPixmap(u":/icons/icons/grey-led-off.png"))
+
+    def refresh_display(self, display, led):
+        with api.connect(display) as client:
+            client.temeout = 5
+            try:
+                led.setPixmap(QPixmap(u":/icons/icons/blue-led-on.png"))
+                QApplication.processEvents()
+                client.keyPress('ctrl-w')
+                led.setPixmap(QPixmap(u":/icons/icons/green-led-on.png"))
+            except TimeoutError:
+                led.setPixmap(QPixmap(u":/icons/icons/red-led-on.png"))
 
 
 if __name__ == "__main__":
