@@ -41,7 +41,7 @@ class Dialog(QDialog):
                 QApplication.processEvents()
                 client.keyPress('ctrl-w')
                 led.setPixmap(QPixmap(u":/icons/icons/green-led-on.png"))
-            except TimeoutError:
+            except api.VNCDoException:
                 led.setPixmap(QPixmap(u":/icons/icons/red-led-on.png"))
 
 
