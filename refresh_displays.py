@@ -1,8 +1,19 @@
+import os
 import sys
-from PySide6.QtWidgets import QApplication, QDialog
-from PySide6.QtGui import QPixmap
+from PySide2.QtWidgets import QApplication, QDialog, QMainWindow, QPushButton
+from PySide2.QtGui import QPixmap, QIcon
 from refresh_displays_dlg import Ui_Dialog
 from vncdotool import api
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
+
 
 class Dialog(QDialog):
     def __init__(self, parent=None):
@@ -12,6 +23,8 @@ class Dialog(QDialog):
         self.ui.setupUi(self)
         self.ui.pushButton_refresh.clicked.connect(self.refresh_displays)
 
+        appIcon = QIcon(resource_path("refresh_displays.png"))
+        self.setWindowIcon(appIcon)
 
     def refresh_displays(self, e):
         self.clear_leds()
@@ -21,7 +34,7 @@ class Dialog(QDialog):
         self.refresh_display("display03",self.ui.label_led_3)
         self.refresh_display("display04",self.ui.label_led_4)
         self.refresh_display("display05",self.ui.label_led_5)
-
+		
     def closeEvent(self, e):
         e.accept()
 
@@ -43,10 +56,10 @@ class Dialog(QDialog):
                 led.setPixmap(QPixmap(u":/icons/icons/green-led-on.png"))
             except api.VNCDoException:
                 led.setPixmap(QPixmap(u":/icons/icons/red-led-on.png"))
-
+		
 
 if __name__ == "__main__":
     application = QApplication()
     dialog = Dialog()
     dialog.show()
-    sys.exit(application.exec())
+    sys.exit(application.exec_())
